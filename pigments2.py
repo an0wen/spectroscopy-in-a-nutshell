@@ -16,6 +16,7 @@ FONT_CHOICES = ["Comic Neue", "Comic Sans MS", "Chalkboard", "DejaVu Sans"]
 available_fonts = {font.name for font in font_manager.fontManager.ttflist}
 COMIC_FONT = next(name for name in FONT_CHOICES if name in available_fonts)
 
+FIG_OUTPUT_DIR = "./figures/"
 
 # ============================================================
 # GLOBAL STYLE
@@ -456,12 +457,12 @@ plt.subplots_adjust(
 # ============================================================
 
 plt.savefig(
-    "pigments2.pdf",
+    FIG_OUTPUT_DIR+"pigments2.pdf",
     bbox_inches="tight"
 )
 
 plt.savefig(
-    "pigments2.png",
+    FIG_OUTPUT_DIR+"pigments2.png",
     dpi=300,
     bbox_inches="tight"
 )
